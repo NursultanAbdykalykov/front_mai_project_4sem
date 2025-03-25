@@ -18,4 +18,4 @@ npm run start
 ```
 
 # Wiki
-
+https://github.com/NursultanAbdykalykov/front_mai_project_4sem.wiki.git
