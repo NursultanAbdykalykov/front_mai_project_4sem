@@ -26,13 +26,17 @@ https://www.figma.com/design/gPlXZpQ1RkWrDHBLVmOL57/Has-Been-Image-Colorization-
 # FRONTEND ARCHITECTURE
 ```bash
 src/
-├── components/              # Компоненты (каждый в своей папке)
+├── components/
+│   ├── ui/                  # Переиспользуемые компоненты (новые)
+│   │
 │   ├── Header/              # Шапка сайта
 │   ├── UploadArea/          # Блок загрузки фото
 │   ├── Gallery/             # Галерея изображений  
 │   ├── Features/            # Блок преимуществ
 │   └── Footer/              # Подвал
+│
 ├── styles/
-│   └── global.scss            # Глобальный сброс стилей
-└── App.js                   # Корневой компонент
+│   ├── global.scss          # Глобальные стили
+│   
+└── App.js
 ```
