@@ -6,8 +6,8 @@ export const Header = () => {
     console.log("Dark");
   };
   return (
-    <div className={styles.Header}>
-      <div className={styles.Logo}>
+    <div className={styles.leader}>
+      <div className={styles.logo}>
         <p className={styles.headerTitle}>Has-Been</p>
         <p className={styles.headerSubtitle}>Восстановление цвета</p>
       </div>
