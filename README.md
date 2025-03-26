@@ -23,20 +23,4 @@ https://github.com/NursultanAbdykalykov/front_mai_project_4sem/wiki
 # Figma
 https://www.figma.com/design/gPlXZpQ1RkWrDHBLVmOL57/Has-Been-Image-Colorization-Service?node-id=0-1&p=f&t=5V1zbn2XYZ2OkSCF-0
 
-# FRONTEND ARCHITECTURE
-```bash
-src/
-├── components/
-│   ├── ui/                  # Переиспользуемые компоненты (новые)
-│   │
-│   ├── Header/              # Шапка сайта
-│   ├── UploadArea/          # Блок загрузки фото
-│   ├── Gallery/             # Галерея изображений  
-│   ├── Features/            # Блок преимуществ
-│   └── Footer/              # Подвал
-│
-├── styles/
-│   ├── global.scss          # Глобальные стили
-│   
-└── App.js
-```
+
