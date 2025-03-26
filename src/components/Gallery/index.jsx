@@ -7,7 +7,7 @@ export const Gallery = () => {
   const [contrast, setContrast] = useState(40);
   const scrollContainer = useRef(null);
   const [scrollPosition, setScrollPosition] = useState(0);
-  const scrollMax = 300; // Максимальная длина ползунка
+  const scrollMax = 300;
 
   const handleUpload = (event) => {
     const files = Array.from(event.target.files);
