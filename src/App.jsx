@@ -6,10 +6,12 @@ import { Features } from "./components/Features";
 import { Gallery } from "./components/Gallery";
 
 createRoot(document.getElementById("root")).render(
-  <>
+  <div className="app">
     <Header />
-    <Gallery />
-    <Features />
+    <div className="gradient-background">
+      <Gallery />
+      <Features />
+    </div>
     <Footer />
-  </>
+  </div>
 );
