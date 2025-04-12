@@ -44,6 +44,7 @@
   font-weight: 300;
   font-size: 16px;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
 .controls {
@@ -116,6 +117,7 @@ input[type="range"]::-moz-range-thumb {
 .photosContainer {
   display: flex;
   gap: 10px;
+  justify-content: space-between;
   margin-top: 20px;
   padding-bottom: 10px;
   width: 670px;
@@ -124,4 +126,42 @@ input[type="range"]::-moz-range-thumb {
   margin: auto;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card {
+  position: relative; /* Это нужно, чтобы absolute работал правильно */
+  width: 120px;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.deleteButton {
+  position: absolute;
+  top: 8px; /* Расстояние от верхнего края */
+  right: 8px; /* Расстояние от правого края */
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2; /* Для того, чтобы кнопка не скрывалась под изображением */
+  transition: all 0.2s;
+}
+
+.deleteButton:hover {
+  background: rgba(255, 0, 0, 0.8);
+  transform: scale(1.1); /* Эффект при наведении */
 }

@@ -2,7 +2,14 @@ import React, { useState, useRef } from "react";
 import styles from "./styles.module.scss";
 
 export const Gallery = () => {
-  const [uploadedPhotos, setUploadedPhotos] = useState([]);
+  const [uploadedPhotos, setUploadedPhotos] = useState([
+    "/images/bicycle.png",
+    "/images/smartphone.png",
+    "/images/t-shirt.png",
+    "/images/table.png",
+    "/images/textbook.png",
+  ]);
+
   const [noiseReduction, setNoiseReduction] = useState(25);
   const [contrast, setContrast] = useState(40);
   const scrollContainer = useRef(null);
@@ -89,17 +96,22 @@ export const Gallery = () => {
       >
         {uploadedPhotos.map((photo, index) => (
           <div key={index} className={styles.photo}>
-            <img
-              src={photo}
-              alt={`Uploaded ${index}`}
-              className={styles.image}
-            />
-            <span
-              className={styles.closeBtn}
-              onClick={() => handleRemove(index)}
-            >
-              ✖
-            </span>
+            <div className={styles.card}>
+              <img
+                src={photo}
+                alt={`Uploaded ${index}`}
+                className={styles.image}
+                width={120}
+                height={150}
+              />
+              <button
+                className={styles.deleteButton}
+                onClick={() => handleRemove(index)}
+                aria-label="Удалить фотографию"
+              >
+                ×
+              </button>
+            </div>
           </div>
         ))}
       </div>
