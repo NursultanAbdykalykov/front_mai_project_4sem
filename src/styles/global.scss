@@ -7,5 +7,20 @@
 html,
 body {
   height: 100%;
-  background-color: #3b1c32;
+  background: linear-gradient(
+    135deg,
+    #3b1c32 0%,
+    #3b1c32 100%
+  ),
+  radial-gradient(
+    circle at 100% 5%,
+    rgba(217,180,198, 0.35) 5%,
+    transparent 30%
+  ),
+  radial-gradient(
+    circle at 5% 50%,
+    rgba(217,180,198, 0.35) 0%,
+    transparent 30%
+  );
+  background-blend-mode: overlay;
 }
