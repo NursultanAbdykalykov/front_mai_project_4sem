@@ -7,7 +7,6 @@ export const Gallery = () => {
     "/images/smartphone.png",
     "/images/t-shirt.png",
     "/images/table.png",
-    "/images/textbook.png",
   ]);
 
   const [noiseReduction, setNoiseReduction] = useState(25);
