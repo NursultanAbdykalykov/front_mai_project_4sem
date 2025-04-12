@@ -117,35 +117,34 @@ input[type="range"]::-moz-range-thumb {
 .photosContainer {
   display: flex;
   gap: 10px;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-top: 20px;
   padding-bottom: 10px;
   width: 670px;
-  height: 165px;
+  min-height: 165px;
+  max-height: 165px;
   background-color: #422038;
   margin: auto;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .card {
-  position: relative; /* Это нужно, чтобы absolute работал правильно */
+  position: relative;
   width: 120px;
   height: 150px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
-
-  &:hover {
-    transform: translateY(-4px);
-  }
 }
 
 .deleteButton {
   position: absolute;
-  top: 8px; /* Расстояние от верхнего края */
-  right: 8px; /* Расстояние от правого края */
+  top: 8px;
+  right: 8px;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -157,11 +156,11 @@ input[type="range"]::-moz-range-thumb {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 2; /* Для того, чтобы кнопка не скрывалась под изображением */
+  z-index: 2;
   transition: all 0.2s;
 }
 
 .deleteButton:hover {
   background: rgba(255, 0, 0, 0.8);
-  transform: scale(1.1); /* Эффект при наведении */
+  transform: scale(1.1);
 }
