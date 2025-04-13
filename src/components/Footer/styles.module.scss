@@ -1,4 +1,12 @@
+@font-face {
+  font-family: 'Droid Sans';
+  src: url('../../src/styles/fonts/DroidSans.ttf');
+}
+
+
 .footer {
+  font-family: 'Droid Sans';
+  font-size: 20px;
   background-color: #1a1a1d;
   height: 42px;
   display: flex;

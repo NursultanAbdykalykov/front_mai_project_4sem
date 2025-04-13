@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Droid Sans';
+  src: url('../../src/styles/fonts/DroidSans.ttf');
+}
+
+@font-face {
+  font-family: 'Sansation Light';
+  src: url('../../src/styles/fonts/Sansation-Light.woff');
+}
+
+.title, .subtitle, .item {
+  font-family: 'Droid Sans';
+}
+
 .features {
   display: flex;
   max-width: 780px;
@@ -16,7 +30,7 @@
 }
 
 .subtitle {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
   color: #ffffff;
   padding-bottom: 12px;
@@ -34,11 +48,12 @@ li {
 
 .item {
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
 .itemDescription {
+  font-family: 'Sansation Light';
   font-size: 18px;
   font-weight: 300;
   color: #ffffff;
