@@ -1,19 +1,24 @@
 @font-face {
-  font-family: 'Droid Sans';
-  src: url('../../src/styles/fonts/DroidSans.ttf');
+  font-family: "Droid Sans";
+  src: url("../../src/styles/fonts/DroidSans.ttf");
 }
 
 @font-face {
-  font-family: 'Sansation Light';
-  src: url('../../src/styles/fonts/Sansation-Light.woff');
+  font-family: "Sansation Light";
+  src: url("../../src/styles/fonts/Sansation-Light.woff");
 }
 
-.title, .titleDescription, .processButton, .titlePhotosContainer {
-  font-family: 'Droid Sans';
+.title,
+.titleDescription,
+.processButton,
+.titlePhotosContainer {
+  font-family: "Droid Sans";
 }
 
-.titleControls, .description, .uploadSection {
-  font-family: 'Sansation Light';
+.titleControls,
+.description,
+.uploadSection {
+  font-family: "Sansation Light";
 }
 
 .galleryContainer {
@@ -51,6 +56,8 @@
 
 .uploadBox {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
   justify-content: center;
   align-items: center;
   width: 285px;
@@ -142,7 +149,7 @@ input[type="range"]::-moz-range-thumb {
   margin-top: 20px;
   padding: 10px 65px 10px 65px;
   width: 670px;
-  height: auto;
+  height: 180px;
   background-color: #422038;
   margin: auto;
   border-radius: 4px;

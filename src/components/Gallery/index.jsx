@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import styles from "./styles.module.scss";
+import UploadIcon from "./icon.png";
 
 export const Gallery = () => {
   const [uploadedPhotos, setUploadedPhotos] = useState([
@@ -56,6 +57,13 @@ export const Gallery = () => {
             accept="image/*"
             onChange={handleUpload}
             hidden
+          />
+          <img
+            src={UploadIcon}
+            alt="Upload"
+            className={styles.uploadIcon}
+            height={48}
+            width={48}
           />
           <span>Загрузите фотографию</span>
         </label>
