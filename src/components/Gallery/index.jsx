@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import styles from "./styles.module.scss";
-import UploadIcon from "./icon.png";
+import SliderWithCounter from '/src/components/Gallery/sliderWithCounter.jsx';import UploadIcon from "./icon.png";
 
 export const Gallery = () => {
   const [uploadedPhotos, setUploadedPhotos] = useState([
@@ -70,23 +70,11 @@ export const Gallery = () => {
         <div className={styles.controls}>
           <div className={styles.titleControls}>Настройте обработку</div>
           <label>
-            <input
-              type="range"
-              min="0"
-              max="100"
-              value={noiseReduction}
-              onChange={(e) => setNoiseReduction(e.target.value)}
-            />
-            <div className={styles.description}>Удаление шумов</div>
+          <SliderWithCounter />
+          <div className={styles.description}>Удаление шумов</div>
           </label>
           <label>
-            <input
-              type="range"
-              min="0"
-              max="100"
-              value={contrast}
-              onChange={(e) => setContrast(e.target.value)}
-            />
+            <SliderWithCounter />
             <div className={styles.description}>Контраст</div>
           </label>
           <button className={styles.processButton}>Обработать</button>
