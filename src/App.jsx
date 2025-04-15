@@ -1,17 +1,17 @@
-import { createRoot } from "react-dom/client";
-import "./styles/global.scss";
+import React from "react";
+import { Outlet } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
-import { Features } from "./components/Features";
-import { Gallery } from "./components/Gallery";
+import "./styles/global.scss";
 
-createRoot(document.getElementById("root")).render(
-  <div className="app">
-    <Header />
-    <div className="gradient-background">
-      <Gallery />
-      <Features />
+export const App = () => {
+  return (
+    <div className="app">
+      <Header />
+      <main className="gradient-background">
+        <Outlet />
+      </main>
+      <Footer />
     </div>
-    <Footer />
-  </div>
-);
+  );
+};

@@ -4,6 +4,7 @@ import SliderWithCounter from "/src/components/Gallery/sliderWithCounter.jsx";
 import downloadIconUrl from "./downloadIcon.svg";
 import photoIconUrl from "./photoIcon.svg";
 
+
 export const Gallery = () => {
   const [uploadedPhotos, setUploadedPhotos] = useState([
     "/images/bicycle.png",
