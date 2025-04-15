@@ -1,8 +1,9 @@
 import React, { useState, useRef } from "react";
 import styles from "./styles.module.scss";
-import SliderWithCounter from "/src/components/Gallery/sliderWithCounter.jsx";
-import downloadIconUrl from "../../shared/assets/icons/downloadIcon.svg";
+import SliderWithCounter from "/src/components/Gallery/components/sliderWithCounter/sliderWithCounter.jsx";
 import photoIconUrl from "../../shared/assets/icons/photoIcon.svg";
+import { PhotoCard } from "./components/PhotoCard";
+import { UploadPhoto } from "./components/UploadPhoto";
 
 export const Gallery = () => {
   const [uploadedPhotos, setUploadedPhotos] = useState([
@@ -53,23 +54,8 @@ export const Gallery = () => {
       </div>
 
       <div className={styles.uploadSection}>
-        <label className={styles.uploadBox}>
-          <input
-            type="file"
-            multiple
-            accept="image/*"
-            onChange={handleUpload}
-            hidden
-          />
-          <img
-            src={downloadIconUrl}
-            alt="Upload"
-            className={styles.uploadIcon}
-            height={48}
-            width={48}
-          />
-          <span>Загрузите фотографию</span>
-        </label>
+        <UploadPhoto onUpload={handleUpload} />
+
         <div className={styles.controls}>
           <div className={styles.titleControls}>Настройте обработку</div>
           <label>
@@ -93,24 +79,11 @@ export const Gallery = () => {
         onScroll={handleScroll}
       >
         {uploadedPhotos.map((photo, index) => (
-          <div key={index} className={styles.photo}>
-            <div className={styles.card}>
-              <img
-                src={photo}
-                alt={`Uploaded ${index}`}
-                className={styles.image}
-                width={120}
-                height={150}
-              />
-              <button
-                className={styles.deleteButton}
-                onClick={() => handleRemove(index)}
-                aria-label="Удалить фотографию"
-              >
-                ×
-              </button>
-            </div>
-          </div>
+          <PhotoCard
+            key={index}
+            photo={photo}
+            onRemove={() => handleRemove(index)}
+          />
         ))}
       </div>
 
