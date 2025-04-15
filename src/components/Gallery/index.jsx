@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import SliderWithCounter from "/src/components/Gallery/components/sliderWithCounter/sliderWithCounter.jsx";
 import photoIconUrl from "../../shared/assets/icons/photoIcon.svg";
@@ -13,10 +13,6 @@ export const Gallery = () => {
     "/images/table.png",
   ]);
 
-  const scrollContainer = useRef(null);
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const scrollMax = 300;
-
   const handleUpload = (event) => {
     const files = Array.from(event.target.files);
     const newPhotos = files.map((file) => URL.createObjectURL(file));
@@ -25,20 +21,6 @@ export const Gallery = () => {
 
   const handleRemove = (index) => {
     setUploadedPhotos((prev) => prev.filter((_, i) => i !== index));
-  };
-
-  const handleScroll = () => {
-    const container = scrollContainer.current;
-    const scrollRatio =
-      container.scrollLeft / (container.scrollWidth - container.clientWidth);
-    setScrollPosition(scrollRatio * scrollMax);
-  };
-
-  const handleSliderMove = (e) => {
-    const container = scrollContainer.current;
-    const newScrollLeft =
-      (e.clientX / scrollMax) * (container.scrollWidth - container.clientWidth);
-    container.scrollLeft = newScrollLeft;
   };
 
   return (
@@ -72,12 +54,7 @@ export const Gallery = () => {
 
       <div className={styles.titlePhotosContainer}>Загруженные фото</div>
 
-      {/* Контейнер с фото */}
-      <div
-        className={styles.photosContainer}
-        ref={scrollContainer}
-        onScroll={handleScroll}
-      >
+      <div className={styles.photosContainer}>
         {uploadedPhotos.map((photo, index) => (
           <PhotoCard
             key={index}
@@ -85,14 +62,6 @@ export const Gallery = () => {
             onRemove={() => handleRemove(index)}
           />
         ))}
-      </div>
-
-      {/* Кастомный ползунок */}
-      <div className={styles.sliderTrack} onMouseMove={handleSliderMove}>
-        <div
-          className={styles.sliderThumb}
-          style={{ left: `${scrollPosition}px` }}
-        />
       </div>
     </div>
   );
