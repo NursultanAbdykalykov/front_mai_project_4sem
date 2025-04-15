@@ -6,14 +6,19 @@
 .sliderGroup {
   display: flex;
   flex-direction: column;
-  gap: 8px;
   width: 100%;
+  margin-bottom: 0;
 }
+
 
 .sliderRow {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+
+.sliderLabel{
+  height: 0px;
 }
 
 input[type="range"] {
