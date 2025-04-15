@@ -28,8 +28,9 @@
 }
 
 .title {
-  margin: auto;
-  width: 420px;
+  display: flex;
+  gap: 9px;
+  justify-content: center;
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -73,7 +74,6 @@
   cursor: pointer;
 }
 
-
 .controls {
   width: 100%;
   max-width: 400px;
@@ -84,7 +84,6 @@
   padding: 15px;
   border-radius: 10px;
 }
-
 
 .description {
   display: flex;
