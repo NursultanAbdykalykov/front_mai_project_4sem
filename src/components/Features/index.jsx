@@ -1,8 +1,13 @@
 import styles from "./styles.module.scss";
+import arrowDropDownUrl from "./arrowDropDown.svg";
 
 export const Features = () => {
   return (
     <>
+      <div className={styles.arrowIcon}>
+        <img src={arrowDropDownUrl} alt="" />
+      </div>
+
       <div className={styles.title}>Мы предлагаем</div>
 
       <div className={styles.features}>
