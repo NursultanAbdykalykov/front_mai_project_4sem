@@ -1,9 +1,8 @@
 import React, { useState, useRef } from "react";
 import styles from "./styles.module.scss";
 import SliderWithCounter from "/src/components/Gallery/sliderWithCounter.jsx";
-import downloadIconUrl from "./downloadIcon.svg";
-import photoIconUrl from "./photoIcon.svg";
-
+import downloadIconUrl from "../../shared/assets/icons/downloadIcon.svg";
+import photoIconUrl from "../../shared/assets/icons/photoIcon.svg";
 
 export const Gallery = () => {
   const [uploadedPhotos, setUploadedPhotos] = useState([

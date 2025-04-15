@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import arrowDropDownUrl from "./arrowDropDown.svg";
+import arrowDropDownUrl from "../../shared/assets/icons/arrowDropDown.svg";
 
 export const Features = () => {
   return (

@@ -1,4 +1,4 @@
-import darkThemeUrl from "./darkTheme.svg";
+import darkThemeUrl from "../../shared/assets/icons/darkTheme.svg";
 import styles from "./styles.module.scss";
 
 export const Header = () => {
