@@ -43,12 +43,12 @@ export const Gallery = () => {
           <SliderWithCounter
             id="noiseReduction"
             label="Удаление шумов"
-            description="Описание слайдера для шумов"
+            description="Удаление шумов"
           />
           <SliderWithCounter
             id="contrast"
             label="Контраст"
-            description="Описание слайдера для контраста"
+            description="Контраст"
           />
 
           <button className={styles.processButton}>Обработать</button>
