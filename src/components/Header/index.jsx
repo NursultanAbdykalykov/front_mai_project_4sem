@@ -1,4 +1,4 @@
-import lightThemeIcon from "./lightMode.png";
+import darkThemeUrl from "./darkTheme.svg";
 import styles from "./styles.module.scss";
 
 export const Header = () => {
@@ -17,7 +17,7 @@ export const Header = () => {
         aria-label="Сменить тему"
       >
         <img
-          src={lightThemeIcon}
+          src={darkThemeUrl}
           alt="Иконка темы"
           className={styles.themeIcon}
           width={48}

@@ -1,7 +1,9 @@
 import React, { useState, useRef } from "react";
 import styles from "./styles.module.scss";
 import SliderWithCounter from "/src/components/Gallery/sliderWithCounter.jsx";
-import UploadIcon from "./icon.png";
+import downloadIconUrl from "./downloadIcon.svg";
+import photoIconUrl from "./photoIcon.svg";
+
 
 export const Gallery = () => {
   const [uploadedPhotos, setUploadedPhotos] = useState([
@@ -41,7 +43,10 @@ export const Gallery = () => {
 
   return (
     <div className={styles.galleryContainer}>
-      <div className={styles.title}>Старые фото — новая жизнь</div>
+      <div className={styles.title}>
+        <img src={photoIconUrl} />
+        Старые фото — новая жизнь
+      </div>
       <div className={styles.titleDescription}>
         <p>Вернуть к жизни старые фотографии? Легко!</p>
         <p>Придайте старым фото яркие цвета с помощью</p>
@@ -58,7 +63,7 @@ export const Gallery = () => {
             hidden
           />
           <img
-            src={UploadIcon}
+            src={downloadIconUrl}
             alt="Upload"
             className={styles.uploadIcon}
             height={48}
