@@ -31,16 +31,19 @@
   display: flex;
   gap: 9px;
   justify-content: center;
+  align-items: center;
   font-size: 28px;
-  font-weight: 700;
+  font-weight: bold;
   margin-bottom: 20px;
+  line-height: 100%;
 }
 .titleDescription {
   margin: auto;
-  width: 530px;
-  height: 135px;
+  width: 529px;
+  height: 136px;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: regular;
+  line-height: 100%;
 }
 
 .uploadSection {
