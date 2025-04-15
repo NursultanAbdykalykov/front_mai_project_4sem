@@ -40,14 +40,17 @@ export const Gallery = () => {
 
         <div className={styles.controls}>
           <div className={styles.titleControls}>Настройте обработку</div>
-          <label>
-            <SliderWithCounter />
-            <div className={styles.description}>Удаление шумов</div>
-          </label>
-          <label>
-            <SliderWithCounter />
-            <div className={styles.description}>Контраст</div>
-          </label>
+          <SliderWithCounter
+            id="noiseReduction"
+            label="Удаление шумов"
+            description="Описание слайдера для шумов"
+          />
+          <SliderWithCounter
+            id="contrast"
+            label="Контраст"
+            description="Описание слайдера для контраста"
+          />
+
           <button className={styles.processButton}>Обработать</button>
         </div>
       </div>

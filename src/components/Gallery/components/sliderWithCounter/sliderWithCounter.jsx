@@ -1,13 +1,13 @@
 import { useState } from "react";
 import styles from "./styles.module.scss";
 
-const SliderWithCounter = () => {
-  const [noiseReduction, setNoiseReduction] = useState(25);
+const SliderWithCounter = ({ label, description, id }) => {
+  const [value, setValue] = useState(25);
   const [inputValue, setInputValue] = useState("25");
 
   const handleSliderChange = (e) => {
     const value = parseInt(e.target.value);
-    setNoiseReduction(value);
+    setValue(value);
     setInputValue(value.toString());
   };
 
@@ -18,37 +18,38 @@ const SliderWithCounter = () => {
     if (/^\d+$/.test(value)) {
       const num = parseInt(value);
       if (num >= 0 && num <= 100) {
-        setNoiseReduction(num);
+        setValue(num);
       }
     }
   };
 
   const handleBlur = () => {
     if (!/^\d+$/.test(inputValue)) {
-      setInputValue(noiseReduction.toString());
+      setInputValue(value.toString());
     }
   };
 
   const increment = () => {
-    const newValue = Math.min(100, noiseReduction + 1);
-    setNoiseReduction(newValue);
+    const newValue = Math.min(100, value + 1);
+    setValue(newValue);
     setInputValue(newValue.toString());
   };
 
   const decrement = () => {
-    const newValue = Math.max(0, noiseReduction - 1);
-    setNoiseReduction(newValue);
+    const newValue = Math.max(0, value - 1);
+    setValue(newValue);
     setInputValue(newValue.toString());
   };
 
   return (
-    <div className={styles.sliderGroup}>
+    <label htmlFor={id} className={styles.sliderGroup}>
       <div className={styles.sliderRow}>
         <input
+          id={id}
           type="range"
           min="0"
           max="100"
-          value={noiseReduction}
+          value={value}
           onChange={handleSliderChange}
           className={styles.slider}
         />
@@ -70,7 +71,9 @@ const SliderWithCounter = () => {
           </div>
         </div>
       </div>
-    </div>
+      {label && <div className={styles.sliderLabel}>{label}</div>}
+      {description && <div className={styles.description}>{description}</div>}
+    </label>
   );
 };
 
