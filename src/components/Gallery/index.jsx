@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import styles from "./styles.module.scss";
-import SliderWithCounter from '/src/components/Gallery/sliderWithCounter.jsx';import UploadIcon from "./icon.png";
+import SliderWithCounter from "/src/components/Gallery/sliderWithCounter.jsx";
+import UploadIcon from "./icon.png";
 
 export const Gallery = () => {
   const [uploadedPhotos, setUploadedPhotos] = useState([
@@ -10,8 +11,6 @@ export const Gallery = () => {
     "/images/table.png",
   ]);
 
-  const [noiseReduction, setNoiseReduction] = useState(25);
-  const [contrast, setContrast] = useState(40);
   const scrollContainer = useRef(null);
   const [scrollPosition, setScrollPosition] = useState(0);
   const scrollMax = 300;
@@ -70,8 +69,8 @@ export const Gallery = () => {
         <div className={styles.controls}>
           <div className={styles.titleControls}>Настройте обработку</div>
           <label>
-          <SliderWithCounter />
-          <div className={styles.description}>Удаление шумов</div>
+            <SliderWithCounter />
+            <div className={styles.description}>Удаление шумов</div>
           </label>
           <label>
             <SliderWithCounter />
