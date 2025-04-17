@@ -4,8 +4,15 @@ import SliderWithCounter from "/src/components/Gallery/components/sliderWithCoun
 import photoIconUrl from "../../shared/assets/icons/photoIcon.svg";
 import { PhotoCard } from "./components/PhotoCard";
 import { UploadPhoto } from "./components/UploadPhoto";
+import { useNavigate } from "react-router-dom";
 
 export const Gallery = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/result");
+  };
+
   const [uploadedPhotos, setUploadedPhotos] = useState([
     "/images/bicycle.png",
     "/images/smartphone.png",
@@ -51,7 +58,9 @@ export const Gallery = () => {
             description="Контраст"
           />
 
-          <button className={styles.processButton}>Обработать</button>
+          <button className={styles.processButton} onClick={handleClick}>
+            Обработать
+          </button>
         </div>
       </div>
 
