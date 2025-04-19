@@ -1,9 +1,17 @@
 import React from "react";
+import { useState } from "react";
 import styles from "./styles.module.scss";
 import photoIconUrl from "../shared/assets/icons/photoIcon.svg";
 import { PhotoCard } from "../components/PhotoCard";
 
 export const Result = () => {
+  const [uploadedPhotos, setUploadedPhotos] = useState([
+    "/images/bicycle.png",
+    "/images/smartphone.png",
+    "/images/t-shirt.png",
+    "/images/table.png",
+    "/images/jeans.png",
+  ]);
   return (
     <div className={styles.container}>
       <div className={styles.title}>
@@ -17,12 +25,16 @@ export const Result = () => {
       <div className={styles.resultContainer}>
         <div className={styles.downloadInformation}></div>
         <div className={styles.photosContainer}>
-          <PhotoCard width={250} height={250} />
-          <PhotoCard width={150} height={150} />
-          <PhotoCard width={150} height={150} />
-          <PhotoCard width={150} height={150} />
-          <PhotoCard width={150} height={150} />
-          <PhotoCard width={150} height={150} />
+          {uploadedPhotos.map((photo, index) => (
+            <PhotoCard
+              key={index}
+              photo={photo}
+              width={258}
+              height={329}
+              type="download"
+              // onClick={() => handleRemove(index)}
+            />
+          ))}
         </div>
       </div>
     </div>

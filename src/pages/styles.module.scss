@@ -7,7 +7,7 @@
   margin: 20px auto;
   background-color: #422038;
   width: 1251px;
-  height: 356px;
+  height: 381px;
 }
 .title {
   display: flex;
@@ -41,8 +41,13 @@
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 .photosContainer {
-  padding: 0 81px;
+  padding: 10px 81px;
   display: flex;
   gap: 19px;
   justify-content: space-between;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: auto;
+  scrollbar-color: #a64d79 #592a4b;
 }
