@@ -7,7 +7,7 @@
   margin: 20px auto;
   background-color: #422038;
   width: 1251px;
-  height: 387px;
+  height: 356px;
 }
 .title {
   display: flex;
@@ -31,4 +31,18 @@
   text-align: center;
   padding: 20px;
   color: #ffffff;
+}
+.downloadInformation {
+  background-color: #422038;
+  width: 1251px;
+  height: 31px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.photosContainer {
+  padding: 0 81px;
+  display: flex;
+  gap: 19px;
+  justify-content: space-between;
 }
