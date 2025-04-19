@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import SliderWithCounter from "/src/components/Gallery/components/sliderWithCounter/sliderWithCounter.jsx";
 import photoIconUrl from "../../shared/assets/icons/photoIcon.svg";
-import { PhotoCard } from "./components/PhotoCard";
+import { PhotoCard } from "../PhotoCard";
 import { UploadPhoto } from "./components/UploadPhoto";
 import { useNavigate } from "react-router-dom";
 
@@ -71,7 +71,10 @@ export const Gallery = () => {
           <PhotoCard
             key={index}
             photo={photo}
-            onRemove={() => handleRemove(index)}
+            width={120}
+            height={150}
+            type={close}
+            onClick={() => handleRemove(index)}
           />
         ))}
       </div>
