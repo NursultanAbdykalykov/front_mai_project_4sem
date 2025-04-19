@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.scss";
 
-export const PhotoCard = ({ photo, onRemove }) => {
+export const PhotoCard = ({ photo, onRemove, width, height }) => {
   return (
     <div className={styles.photo}>
       <div className={styles.card}>
@@ -9,8 +9,8 @@ export const PhotoCard = ({ photo, onRemove }) => {
           src={photo}
           alt="Uploaded"
           className={styles.image}
-          width={120}
-          height={150}
+          width={width}
+          height={height}
         />
         <button
           className={styles.deleteButton}

@@ -1,0 +1,34 @@
+.title,
+.titleDescription {
+  font-family: "Droid Sans";
+}
+
+.resultContainer {
+  margin: 20px auto;
+  background-color: #422038;
+  width: 1251px;
+  height: 387px;
+}
+.title {
+  display: flex;
+  gap: 9px;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 100%;
+}
+.titleDescription {
+  margin: auto;
+  width: 529px;
+  height: 136px;
+  font-size: 20px;
+  font-weight: regular;
+  line-height: 100%;
+}
+.container {
+  text-align: center;
+  padding: 20px;
+  color: #ffffff;
+}
