@@ -71,9 +71,10 @@ export const Gallery = () => {
           <PhotoCard
             key={index}
             photo={photo}
-            width={150}
+            width={120}
             height={150}
-            onRemove={() => handleRemove(index)}
+            type={close}
+            onClick={() => handleRemove(index)}
           />
         ))}
       </div>
