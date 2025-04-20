@@ -14,7 +14,7 @@ export const Result = () => {
   ]);
 
   const totalPhotos = uploadedPhotos.length;
-  const [processedPhotos, setProcessedPhotos] = useState(1); // Установлено 3 как на скриншоте
+  const [processedPhotos, setProcessedPhotos] = useState(1);
   const progressPercentage = Math.round((processedPhotos / totalPhotos) * 100);
 
   const handleDownload = (photoUrl) => {
