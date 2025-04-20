@@ -13,6 +13,10 @@ export const Result = () => {
     "/images/jeans.png",
   ]);
 
+  const totalPhotos = uploadedPhotos.length;
+  const [processedPhotos, setProcessedPhotos] = useState(1);
+  const progressPercentage = Math.round((processedPhotos / totalPhotos) * 100);
+
   const handleDownload = (photoUrl) => {
     const link = document.createElement("a");
     link.href = photoUrl;
@@ -40,7 +44,7 @@ export const Result = () => {
   return (
     <div className={styles.container}>
       <div className={styles.title}>
-        <img src={photoIconUrl} />
+        <img src={photoIconUrl} alt="Фото" />
         Ожидайте обработки фотографий
       </div>
       <div className={styles.titleDescription}>
@@ -49,8 +53,17 @@ export const Result = () => {
       </div>
       <div className={styles.resultContainer}>
         <div className={styles.downloadInformation}>
-          <div>Здесь должен быть прогрессБар</div>
-
+          <div className={styles.progressSection}>
+            <div className={styles.progressBar}>
+              <div 
+                className={styles.progressFill} 
+                style={{ width: `${progressPercentage}%` }}
+              />
+            </div>
+            <div className={styles.photoCounter}>
+              {processedPhotos}/{totalPhotos}
+            </div>
+          </div>
           <div className={styles.time}>{currentDateTime}</div>
         </div>
         <div className={styles.photosContainer}>
