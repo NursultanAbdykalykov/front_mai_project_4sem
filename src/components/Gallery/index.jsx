@@ -44,24 +44,9 @@ export const Gallery = () => {
 
       <div className={styles.uploadSection}>
         <UploadPhoto onUpload={handleUpload} />
-
-        <div className={styles.controls}>
-          <div className={styles.titleControls}>Настройте обработку</div>
-          <SliderWithCounter
-            id="noiseReduction"
-            label="Удаление шумов"
-            description="Удаление шумов"
-          />
-          <SliderWithCounter
-            id="contrast"
-            label="Контраст"
-            description="Контраст"
-          />
-
-          <button className={styles.processButton} onClick={handleClick}>
-            Обработать
-          </button>
-        </div>
+        <button className={styles.processButton} onClick={handleClick}>
+          Обработать
+        </button>
       </div>
 
       <div className={styles.titlePhotosContainer}>Загруженные фото</div>
@@ -71,8 +56,8 @@ export const Gallery = () => {
           <PhotoCard
             key={index}
             photo={photo}
-            width={120}
-            height={150}
+            width={222}
+            height={315}
             type={close}
             onClick={() => handleRemove(index)}
           />

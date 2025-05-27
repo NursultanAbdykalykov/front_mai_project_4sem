@@ -48,33 +48,15 @@
 
 .uploadSection {
   display: flex;
+  flex-direction: column;
   align-items: center;
   background: #422038;
-  width: 677px;
-  height: 238px;
+  width: 330px;
+  height: 260px;
   margin: auto;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 15px;
-}
-
-.controls {
-  width: 100%;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 15px;
-  padding: 15px;
-  border-radius: 10px;
-}
-
-.titleControls {
-  color: #d0d0d0;
-  display: flex;
-  justify-content: flex-start;
-  font-size: 16;
-  font-weight: 300;
 }
 
 .processButton {
@@ -88,6 +70,8 @@
   font-weight: bold;
   font-size: 14px;
   margin: auto;
+  margin-top: 25px;
+  margin-bottom: 8px;
 }
 .titlePhotosContainer {
   margin-bottom: 18px;
@@ -113,4 +97,34 @@
 
   scrollbar-width: auto;
   scrollbar-color: #a64d79 #592a4b;
+}
+
+@media (max-width: 700px) {
+  .title {
+    margin-bottom: 30px;
+  }
+  .uploadSection {
+    width: 540px;
+    height: 545px;
+  }
+  .processButton {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .processButton {
+    width: 172px;
+    height: 51px;
+    font-weight: bold;
+    line-height: 150%;
+    font-size: 24px;
+  }
+  .photosContainer {
+    padding: 12px;
+    width: 550px;
+    height: 730px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: none;
+    gap: 70px;
+  }
 }
