@@ -5,8 +5,7 @@
   justify-content: center;
   align-items: center;
   width: 286px;
-  height: 224px;
-  margin: 10px;
+  height: 270px;
   background: #592a4b;
   border: 2px #ffffff;
   border-radius: 4px;
@@ -16,4 +15,14 @@
   margin-bottom: 15px;
   line-height: 150%;
   cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .uploadBox {
+    width: 460px;
+    height: 355px;
+    margin-top: 76px;
+    margin-right: 40px;
+    margin-left: 40px;
+  }
 }

@@ -5,10 +5,11 @@ import photoIconUrl from "../../shared/assets/icons/photoIcon.svg";
 import { PhotoCard } from "../PhotoCard";
 import { UploadPhoto } from "./components/UploadPhoto";
 import { useNavigate } from "react-router-dom";
+import { useWindowWidth } from "../../shared/assets/hooks/useWindowWidth";
 
 export const Gallery = () => {
   const navigate = useNavigate();
-
+  const screenWidth = useWindowWidth();
   const handleClick = () => {
     navigate("/result");
   };
@@ -44,24 +45,9 @@ export const Gallery = () => {
 
       <div className={styles.uploadSection}>
         <UploadPhoto onUpload={handleUpload} />
-
-        <div className={styles.controls}>
-          <div className={styles.titleControls}>Настройте обработку</div>
-          <SliderWithCounter
-            id="noiseReduction"
-            label="Удаление шумов"
-            description="Удаление шумов"
-          />
-          <SliderWithCounter
-            id="contrast"
-            label="Контраст"
-            description="Контраст"
-          />
-
-          <button className={styles.processButton} onClick={handleClick}>
-            Обработать
-          </button>
-        </div>
+        <button className={styles.processButton} onClick={handleClick}>
+          Обработать
+        </button>
       </div>
 
       <div className={styles.titlePhotosContainer}>Загруженные фото</div>
@@ -71,8 +57,8 @@ export const Gallery = () => {
           <PhotoCard
             key={index}
             photo={photo}
-            width={120}
-            height={150}
+            width={screenWidth > 700 ? 117 : 221}
+            height={screenWidth > 700 ? 149 : 314}
             type={close}
             onClick={() => handleRemove(index)}
           />

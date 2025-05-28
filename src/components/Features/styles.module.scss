@@ -23,9 +23,13 @@
 .features {
   display: flex;
   max-width: 780px;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 26px;
   margin: auto;
+}
+
+.group {
+  flex: 1;
 }
 
 .title {
@@ -65,4 +69,18 @@ li {
   font-size: 18px;
   font-weight: 300;
   color: #ffffff;
+}
+
+@media (max-width: 700px) {
+  .arrowIcon {
+    display: none;
+  }
+
+  .features {
+    flex-direction: column;
+  }
+
+  li {
+    margin-bottom: 0px;
+  }
 }
