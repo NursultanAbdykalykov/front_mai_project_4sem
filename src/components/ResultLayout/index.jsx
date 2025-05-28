@@ -4,8 +4,10 @@ import styles from "./styles.module.scss";
 import photoIconUrl from "../../shared/assets/icons/photoIcon.svg";
 import { PhotoCard } from "../../components/PhotoCard";
 import { ProgressSection } from "../../components/ProgresSection";
+import { useWindowWidth } from "../../shared/assets/hooks/useWindowWidth";
 
 export const ResultLayout = () => {
+  const screenWidth = useWindowWidth();
   const [uploadedPhotos] = useState([
     "/images/bicycle.png",
     "/images/smartphone.png",
@@ -65,8 +67,8 @@ export const ResultLayout = () => {
             <PhotoCard
               key={index}
               photo={photo}
-              width={561}
-              height={716}
+              width={screenWidth > 700 ? 258 : 561}
+              height={screenWidth > 700 ? 329 : 716}
               type="download"
               onClick={() => handleDownload(photo)}
             />

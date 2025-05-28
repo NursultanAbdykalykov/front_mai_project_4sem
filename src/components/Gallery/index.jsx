@@ -5,10 +5,11 @@ import photoIconUrl from "../../shared/assets/icons/photoIcon.svg";
 import { PhotoCard } from "../PhotoCard";
 import { UploadPhoto } from "./components/UploadPhoto";
 import { useNavigate } from "react-router-dom";
+import { useWindowWidth } from "../../shared/assets/hooks/useWindowWidth";
 
 export const Gallery = () => {
   const navigate = useNavigate();
-
+  const screenWidth = useWindowWidth();
   const handleClick = () => {
     navigate("/result");
   };
@@ -56,8 +57,8 @@ export const Gallery = () => {
           <PhotoCard
             key={index}
             photo={photo}
-            width={222}
-            height={315}
+            width={screenWidth > 700 ? 117 : 221}
+            height={screenWidth > 700 ? 149 : 314}
             type={close}
             onClick={() => handleRemove(index)}
           />
