@@ -65,8 +65,8 @@ export const ResultLayout = () => {
             <PhotoCard
               key={index}
               photo={photo}
-              width={258}
-              height={329}
+              width={561}
+              height={716}
               type="download"
               onClick={() => handleDownload(photo)}
             />
